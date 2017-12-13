@@ -1,7 +1,7 @@
 //set global variables
 var wins = 0;
 var losses = 0;
-var currentSessionTalliedValue = 0;
+var currentSessionTalliedValue = 0; //stores value generated from user's crytstal clicks
 var currentGameTargetValue = 0;
 ////////
 var randomTargetValue = [0,1,2,3]; //need 4 (one for each crystal)
@@ -18,6 +18,8 @@ function resetNewGame(){
   currentGameTargetValue = Math.floor(Math.random()*(120-19) + 19); //returns a random number in between 19 and 120 per this source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in
   console.log ("currentGameTargetValue: " + currentGameTargetValue);
   $("#targetValueDisplay").html("TARGET VALUE: " + currentGameTargetValue);
+
+  currentSessionTalliedValue = 0;
 }
 resetNewGame();
 //make it so that when each button/crystal is clicked (onClick/eventListener), the associated value is added to the user's value for that particular game session (e.g. currentSessionTalliedValue);
@@ -58,13 +60,14 @@ function lossOrWin () {
     losses++;
     $("#losses").html("Losses: " + losses);
     resetNewGame();
-    alert ("you lost. sorry number is too big :( ");
+    alert ("You lost. Sorry, number is too big :( \n Click another crystal to start over again w/ new values");
   }
   //describes the conditions of winning else if (userValueTotal === currentGameTargetValue) {wins++; resetGame()}
   else if (currentSessionTalliedValue === currentGameTargetValue) {
     wins++;
     $("#wins").html("wins: " + wins);
     resetNewGame();
+    //maybe add in event to play Sonic's theme song when u win!
     alert ("you won!");
     }
 }
