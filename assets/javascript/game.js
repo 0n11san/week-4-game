@@ -8,7 +8,7 @@ var randomTargetValue = [0,1,2,3]; //need 4 (one for each crystal)
 
 //declare reset function that runs after game is either won or lost: function resetGame(){}
 function resetNewGame(){
-  for (i=0; i <4; i++){randomTargetValue[i] = Math.floor(Math.random()*12)}
+  for (i=0; i <4; i++){randomTargetValue[i] = Math.floor(Math.random()*(12-1) + 1)}
 
   console.log ("red value: " + randomTargetValue[0]);
   console.log ("blue value: " + randomTargetValue[1]);
