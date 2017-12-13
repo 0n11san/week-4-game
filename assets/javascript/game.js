@@ -14,7 +14,7 @@ console.log ("green value: " + randomTargetValue[3]);
 /////
 var currentGameTargetValue = Math.floor(Math.random()*(120-19) + 19); //returns a random number in between 19 and 120 per this source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in
 console.log ("currentGameTargetValue: " + currentGameTargetValue);
-
+$("#targetValueDisplay").html("TARGET VALUE: " + currentGameTargetValue);
 //make it so that when each button/crystal is clicked (onClick/eventListener), the associated value is added to the user's value for that particualr game session (e.g. currentSessionTalliedValue);
 //then said value is shown on screen in the "userValueDisplay" div. function defined (but not called yet) here:
 function displayUpdatedValue (){$("#userValueDisplay").html("Your total value is: " + currentSessionTalliedValue);}
