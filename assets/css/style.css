@@ -1,3 +1,17 @@
 #visibleTitle {background: orange;
 color: white;
 padding: 25px;}
+
+#panelOfCrystals {
+  background: skyblue;
+  padding: 25px;
+}
+
+#instructions {
+  color: white;
+}
+
+body {
+  background-image: url("../images/skyisland.jpg");
+  /*opacity: "1";*/
+}
