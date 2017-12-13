@@ -3,43 +3,43 @@ var wins = 0;
 var losses = 0;
 var currentSessionTalliedValue = 0;
 ////////
-var randomTargetScore = [0,1,2,3]; //need 4 (one for each crystal)
+var randomTargetValue = [0,1,2,3]; //need 4 (one for each crystal)
 
-for (i=0; i <4; i++){randomTargetScore[i] = Math.floor(Math.random()*12)}
+for (i=0; i <4; i++){randomTargetValue[i] = Math.floor(Math.random()*12)}
 
-console.log ("red value: " + randomTargetScore[0]);
-console.log ("blue value: " + randomTargetScore[1]);
-console.log ("yellow value: " + randomTargetScore[2]);
-console.log ("green value: " + randomTargetScore[3]);
+console.log ("red value: " + randomTargetValue[0]);
+console.log ("blue value: " + randomTargetValue[1]);
+console.log ("yellow value: " + randomTargetValue[2]);
+console.log ("green value: " + randomTargetValue[3]);
 /////
-var currentGameTargetScore = Math.floor(Math.random()*(120-19) + 19); //returns a random number in between 19 and 120 per this source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in
-console.log ("currentGameTargetScore: " + currentGameTargetScore);
+var currentGameTargetValue = Math.floor(Math.random()*(120-19) + 19); //returns a random number in between 19 and 120 per this source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in
+console.log ("currentGameTargetValue: " + currentGameTargetValue);
 
 //make it so that when each button/crystal is clicked (onClick/eventListener), the associated value is added to the user's value for that particualr game session (e.g. currentSessionTalliedValue);
 //then said value is shown on screen in the "userValueDisplay" div. function defined (but not called yet) here:
-function displayUpdatedScore (){$("#userValueDisplay").html("Your total value is: " + currentSessionTalliedValue);}
+function displayUpdatedValue (){$("#userValueDisplay").html("Your total value is: " + currentSessionTalliedValue);}
 //source for click jQuery found here: https://www.w3schools.com/jquery/event_click.asp
 // Note: can I simplify/condense this? maybe turn it into a single function and loop the target array
 //Question: is "N O T E" a predefined JS term?
 $("#red").click(function(){
-   currentSessionTalliedValue +=randomTargetScore[0];
+   currentSessionTalliedValue +=randomTargetValue[0];
  console.log("TalliedValue: " + currentSessionTalliedValue);
- displayUpdatedScore ();
+ displayUpdatedValue ();
 });
 $("#blue").click(function(){
-   currentSessionTalliedValue +=randomTargetScore[1];
+   currentSessionTalliedValue +=randomTargetValue[1];
  console.log("TalliedValue: " + currentSessionTalliedValue);
- displayUpdatedScore ();
+ displayUpdatedValue ();
 });
 $("#yellow").click(function(){
-   currentSessionTalliedValue +=randomTargetScore[2];
+   currentSessionTalliedValue +=randomTargetValue[2];
  console.log("TalliedValue: " + currentSessionTalliedValue);
- displayUpdatedScore ();
+ displayUpdatedValue ();
 });
 $("#green").click(function(){
-   currentSessionTalliedValue +=randomTargetScore[3];
+   currentSessionTalliedValue +=randomTargetValue[3];
  console.log("TalliedValue: " + currentSessionTalliedValue);
- displayUpdatedScore ();
+ displayUpdatedValue ();
 });
 //game begins when user clicks one of the buttons/crystals
 
