@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Crystal Collector</title>
+
+  <!-- spec: http://gw.bootcampcontent.com/GW-Coding-Boot-Camp/GWAR201710FSF5-Class-Repository-FSF/blob/master/04-jquery/02-Homework/Instructions/homework_instructions.md -->
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--   link bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+  <!-- link personal style sheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+  <div>
+    <h1 id="visibleTitle">Crystals Collector!</h1>
+  </div>
+
+  <div id="instructions">
+    <p>You will be given a random number at the start of the game.</p>
+
+    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+
+    <p>You win the game by matching your total score to the ramdom number, you lose the game if your total score goes above the random number.</p>
+
+    <p>The value of each crystal is hidden from you until you click on it. </p>
+
+    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+  </div>
+
+
+  <div id="targetValueDisplay">
+  </div>
+
+  <div id="winsLossesDisplay">
+  </div>
+
+  <div id="panelOfCrystals">
+    <!--   values are temporary for test purposes only; need to replace w/ randomly generated ones each new game -->
+    <button class="diamond" id="red" value="4">Red</button>
+    <button class="diamond" id="blue" value="17">Blue</button>
+    <button class="diamond" id="yellow" value="5">Yellow</button>
+    <button class="diamond" id="green" value="10">Green</button>
+  </div>
+
+
+  <div id="userValueDisplay">Your total value is:
+  </div>
+  <div id="winsLossesDisplay">
+    <!--  insert score number here after each game -->
+  </div>
+
+<!--   link jQuery so bootrap works -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<!--   link personal JS file -->
+  <script type="text/javascript" src="assets/javascript/game.js">
+  </script>
+
+</body>
+
+</html>
